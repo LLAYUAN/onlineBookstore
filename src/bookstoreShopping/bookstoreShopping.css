@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+body{
+    background-color: #f3f5f7;
+}
+
+/*版心*/
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*头部*/
+.header {
+    height: 76px;
+    /*background-color: pink;*/
+    border-bottom: 1px solid #00a4ff;
+}
+
+h1 {
+    float: left;
+    border: 0;
+}
+
+/*搜索*/
+.search {
+    float: left;
+    margin: 18px auto 18px 70px;
+    width: 570px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+}
+
+.search input {
+    float: left;
+    width: 518px;
+    height: 38px;
+    border: 0;
+    padding-left: 20px;
+}
+
+.search input::placeholder {
+    color: #bfbfbf;
+}
+
+.search button {
+    float: right;
+    width: 50px;
+    height: 39px;
+    background-image: url("./images/searchBtn.png");
+    border: 0;
+    cursor: pointer;/*鼠标悬浮上去变手形*/
+}
+
+/*用户*/
+.user {
+    float: left;
+}
+
+.user img{
+    float: left;
+    margin-left: 40px;
+    margin-top: 13px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #00a4ff;
+    border-radius: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.user span{
+    float: left;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+/*头部下方导航栏*/
+.nav {
+    height: 40px;
+    /*background-color: green;*/
+}
+
+.nav li{
+    float: left;
+    margin-top: 10px;
+    margin-right: 120px;
+    padding: 0 9px;
+    /*border-bottom: 2px solid #00a4ff;*/
+}
+
+.nav li:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+.nav li a {
+    color: #050505;
+}
+
+.nav li a img{
+    float: left;
+    padding-bottom: 5px;
+    height: 25px;
+    width: 25px;
+    max-height: 100%;
+}
+
+/*轮播图底色*/
+.banner {
+    height: 326px;
+    background-color: #87cefa;
+}
+
+/*轮播图展示容器*/
+.banner_container {
+    height: 326px;
+    width: 796px;
+    overflow: hidden;
+    position: relative;
+}
+
+/*图片存储容器*/
+/*作为我们的图片存储区域，796*4=3184 326*/
+/*它的宽度应该是所有图片的宽度之和，高度的话应该和图片的高度一致*/
+.banner_container .banner_image_container{
+    width: 3184px;
+    height: 326px;
+    overflow: hidden;
+    position: absolute;
+    /* 开启弹性盒，让图片横向排列 */
+    display: flex;
+    animation: run 10s ease infinite;
+}
+
+.banner_container .banner_image_container img{
+    width: 796px;
+    height: 100%;
+}
+
+/* 轮播图关键帧 */
+/* 自动轮播 */
+/*纯css实现有点问题就是它会滚回来（（（*/
+@keyframes run {
+    0%,15%{
+        transform: translateX(0);
+    }
+    25%,40%{
+        transform: translateX(-796px);
+    }
+    50%,65%{
+        transform: translateX(-1592px);
+    }
+    75%,90%{
+        transform: translateX(-2388px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/*商品栏*/
+.books li {
+    float: left;
+    width: 191px;
+    height: 270px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 1px solid #87cefa;
+    /*background-color: pink;*/
+}
+
+/*将第6n个书的右margin设为0*/
+.books li:nth-child(6n) {
+    margin-right: 0;
+}
+
+/*设置每一个商品的长和宽 191*191 */
+.books li a img {
+    width: 189px;
+    height: 189px;
+}
+
+.books li a h3 {
+    color: #050505;
+}
+
+.books li a span {
+    color: #ff2832;
+    font-size: 18px;
+}
+
+/*折扣字体样式（划掉）*/
+#discount {
+    text-decoration: line-through #ff2832;
+}
