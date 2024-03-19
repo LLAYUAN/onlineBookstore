@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+body{
+    background-color: #f3f5f7;
+}
+
+/*版心*/
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*头部*/
+.header {
+    height: 76px;
+    /*background-color: pink;*/
+    border-bottom: 1px solid #00a4ff;
+}
+
+h1 {
+    float: left;
+    border: 0;
+}
+
+/*搜索*/
+.search {
+    float: left;
+    margin: 18px auto 18px 70px;
+    width: 570px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+}
+
+.search input {
+    float: left;
+    width: 518px;
+    height: 38px;
+    border: 0;
+    padding-left: 20px;
+}
+
+.search input::placeholder {
+    color: #bfbfbf;
+}
+
+.search button {
+    float: right;
+    width: 50px;
+    height: 39px;
+    background-image: url("./images/searchBtn.png");
+    border: 0;
+    cursor: pointer;/*鼠标悬浮上去变手形*/
+}
+
+/*用户*/
+.user {
+    float: left;
+}
+
+.user img{
+    float: left;
+    margin-left: 40px;
+    margin-top: 13px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #00a4ff;
+    border-radius: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.user span{
+    float: left;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+/*头部下方导航栏*/
+.nav {
+    height: 40px;
+    /*background-color: green;*/
+}
+
+.nav li{
+    float: left;
+    margin-top: 10px;
+    margin-right: 120px;
+    padding: 0 9px;
+    /*border-bottom: 2px solid #00a4ff;*/
+}
+
+.nav li:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+.nav li a {
+    color: #050505;
+}
+
+.nav li a img{
+    float: left;
+    padding-bottom: 5px;
+    height: 25px;
+    width: 25px;
+    max-height: 100%;
+}
+
+.detailedPage{
+    height: 580px;
+    /*background: pink;*/
+}
+
+.detailedPage .bigPicture{
+    float: left;
+    height: 480px;
+    width: 480px;
+    border: 1px solid #87cefa;
+}
+
+.detailedPage .bigPicture img{
+    height: 478px;
+    width: 478px;
+}
+
+.detailedPage .text{
+    margin-right: 50px;
+    float: right;
+    height: 480px;
+    width: 600px;
+    /*background: #bfbfbf;*/
+}
+
+.detailedPage .text li{
+    margin: 15px;
+}
+
+.detailedPage .text li #discount0{
+    color: #ff2832;
+    font-size: 18px;
+    text-decoration: line-through #ff2832;
+}
+
+.detailedPage .text li #discount1{
+    color: #ff2832;
+    font-size: 25px;
+}
+
+.detailedPage .text li #introduction{
+    color: #666;
+}
+
+.detailedPage button{
+    border: 0;
+    border-radius: 10px;
+    background-color: #87cefa;
+    height: 56px;
+    width: 180px;
+    margin-left: 280px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.detailedPage button img{
+    height: 36px;
+    width: 36px;
+}
+
+.detailedPage button span{
+    float: right;
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.detailedPage button #buy{
+    margin-right: 15px;
+}
